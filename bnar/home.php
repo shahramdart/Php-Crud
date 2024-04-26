@@ -20,19 +20,88 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/style.css" />
+    <style>
+      nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  z-index: 99;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+nav .logo a:hover {
+  color: var(--primary-color-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid transparent;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+
+ul li a:hover {
+  border-top-color: var(--secondary-color);
+  border-bottom-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+    </style>
   </head>
   <body>
-    <div class="nav">
-      <div class="logo">
-        <p><a href="home.php">Home</a></p>
-      </div>
-      <div class="right-links">
-     
-        <a href="adduser.php"><button class="btn">Add User</button></a>
-        <a href="profile.php"><button class="btn">Profile</button></a>
-        <a href="php/logout.php"><button class="btn">Log out</button></a>
-      </div>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="home.php" style="margin-left: 100px;">Home</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+      <li><a href="profile.php">Profile</a></li>   
+        <li><a href="adduser.php">Register User</a></li>
+        <li><a href="index.php">Login</a></li>
+        <li><a href="php/logout.php">Log out</a></li>
+      </ul>
     </div>
+  </nav>
     <!-- Table View users  -->
     <div class="container">
       <?php 
@@ -78,7 +147,9 @@
             <td ><?php echo $row['college_name']; ?></td>
             <td>
               <a href="update_all_users.php?id=<?php echo $row['id']; ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+              <!-- // ? aw delete a esh naka  -->
               <a href="php/delete.php?id=<?php echo $row['id']; ?>" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
+              <!-- // ? aw delete a esh naka  -->
             </td>
           </tr>
           <?php
