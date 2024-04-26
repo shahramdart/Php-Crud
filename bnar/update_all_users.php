@@ -37,7 +37,7 @@
         $id = $_GET['id'];
     
         // Update user data in the database
-        $update_query = mysqli_query($conn, "UPDATE all_users SET name = '$name', department = '$department', stage = '$stage', age = '$age', college_name = '$college_name' WHERE id = $id") or die(mysqli_error($conn));
+        $update_query = mysqli_query($conn, "UPDATE all_users SET name = '$name', email = '$email', department = '$department', stage = '$stage', age = '$age', college_name = '$college_name' WHERE id = $id") or die(mysqli_error($conn));
     
         // Check if update was successful
         if($update_query){

@@ -287,7 +287,7 @@ ul li a:hover {
           </p>
       </div>
       <div class="image">
-        <img src="assets/profile.jpg" alt="profile" />
+        <img src="assets/img.jpg" alt="profile" />
       </div>
     </div>
   </section>

@@ -41,7 +41,7 @@
           if($update_query){
             echo "<div class='message'> 
       <p>Updating Profile successful</p> </div> <br>  ";
-      echo "<a href='home.php'><button class='btn'>Home</button>";
+      echo "<a href='profile.php'><button class='btn'>Home</button>";
           }
 
 
