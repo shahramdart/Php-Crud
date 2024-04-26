@@ -36,7 +36,7 @@
 
           $id = $_SESSION['id'];
 
-          $update_query = mysqli_query($conn, "UPDATE users SET name = '$name', department = '$department', stage = '$stage' WHERE id = $id") or die("error occured");
+          $update_query = mysqli_query($conn, "UPDATE users SET name = '$name', email = '$email', department = '$department', stage = '$stage' WHERE id = $id") or die("error occured");
 
           if($update_query){
             echo "<div class='message'> 
