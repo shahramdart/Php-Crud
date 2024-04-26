@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2024 at 11:31 PM
+-- Generation Time: Apr 26, 2024 at 01:00 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -42,10 +42,9 @@ CREATE TABLE `all_users` (
 --
 
 INSERT INTO `all_users` (`id`, `name`, `email`, `department`, `stage`, `age`, `college_name`) VALUES
-(1, 'Mohammed Ali Rasul', 'mohammed.ali@gmail.com', 'Computer', 'Three', 22, 'Fam Institute'),
-(2, 'Bnar', 'Bnar@gmail.com', 'Computer', 'Three', 22, 'College Raparin'),
-(3, 'John Stateham', 'john@gmail.com', 'It', 'Five', 52, 'Raparin'),
-(4, 'shahram', 'shahram.rania@gmail.com', 'pc', '4', 24, 'Fam');
+(14, 'xvcxz', 'zxcv@dsgs.vcom', 'hhgvjb', '4', 456, 'hjgfdhjg'),
+(16, 'xvcxz', 'zxcv@dsgs.vcom', 'hhgvjb', '4', 456, 'hjgfdhjg'),
+(17, 'xvcxz', 'zxcv@dsgs.vcom', 'hhgvjb', '4', 456, 'hjgfdhjg');
 
 -- --------------------------------------------------------
 
@@ -93,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `all_users`
 --
 ALTER TABLE `all_users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT for table `users`
